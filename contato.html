@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <style>
+      .image-card{
+        width: 100px;
+        height: 100px;
+      }
+      .image-sm-logo{
+        width: 50px;
+        height: 50px;
+      }
+      #mapa{
+      transition: 0.5s ease-in-out;
+      border-radius: 5%;
+      }       
+    </style>
+
+    <title>Acessorios</title>
+  </head>
+  <body>    
+
+    <!-- <nav-bar> -->
+    
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse " id="navbarNav" >
+        <ul class="navbar-nav">
+          <li>
+            <a class="navbar-brand" href="index.html"><img src="https://via.placeholder.com/50x50" alt="" class="image-sm-logo"></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="consoles.html">Consoles</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="jogos.html">Jogos</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="acessorios.html">Acessorios</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="contato.html">Contato<span class="sr-only">(current)</span></a>
+          </li>
+          
+        </ul>
+      </div>
+
+    </nav>
+    <!--/ nav-bar -->
+
+    <!-- spacing nav bar -->
+    <div style="width: 100vw;height: 10vw;"></div>
+
+    
+    <div class="container" style="border: 1px solid #4f72ff;
+    border-radius: 5px;">
+        <h1 class="text-center p-3 ">Fala comigo bebê!</h1>
+
+        <div class="row d-flex justify-content-around p-2 m-1 ">
+
+            <div class="col-md-5 p-1 m-1 text-center" >
+                <form id="formulario">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <div id="txtNome" class="p-1"></div>
+                        <input type="text" class="form-control" id="nome" placeholder="nome sobrenome" onkeyup="validaNome()">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label><br>
+                        <div id="txtEmail" class="p-1"></div>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" onkeyup="validaEmail()"><br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label><br>
+                        <div id="txtAssunto" class="p-1"></div>
+                        <textarea name="assunto" id="assunto" class="form-control" cols="30" rows="5" style="resize: none;" placeholder="qual o assunto?" onkeyup="validaAssunto()"></textarea><br>
+                        <button onclick="enviar()">Enviar</button>
+                    </div>
+                </form>
+            </div>
+
+            
+
+            <div class="col-md-5 p-1 m-1 text-center" >
+                <h2>Endereço</h2>
+                <p>Praça Franklin Roosevelt</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234188.87884991113!2d-46.73431301682027!3d-23.489260278676642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce584c061c1e03%3A0x59e38971f36f9c69!2sPra%C3%A7a%20Franklin%20Roosevelt!5e0!3m2!1spt-BR!2sbr!4v1634774286871!5m2!1spt-BR!2sbr" width="70%" height="30%" style="border:0;" allowfullscreen="" loading="lazy" id="mapa" onmousemove="mapaZoom()" onmouseout="mapaNormal()"></iframe>
+            </div>
+
+        </div>
+
+    </div>
+    
+    
+    
+
+    <!-- <footer> -->
+
+      <div class="container mt-5">
+        <div class="row mx-auto">
+          <div class="col-12 text-center">
+            <h6>WENDELL FRANCO &copy;<h6>
+          </div>
+        </div>
+
+        <div class="row m-auto">
+          <div class="col-12 text-center">
+            <h6>TODOS OS DIREITOS RESERVADOS</h6>
+          </div>
+        </div>
+
+      </div>
+    <!-- </footer> -->
+    
+    <!-- Query and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
